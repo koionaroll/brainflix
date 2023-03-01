@@ -12,9 +12,7 @@ function Header() {
                     <textarea className="header__search" placeholder="Search"></textarea>
                     <img className="header__profile" src={profile} alt="profile" />
                 </div>
-                <a className="header__upload" href="../../App.jsx" type= "submit">
-                    UPLOAD
-                </a>
+                <a className="header__upload" href="../../App.jsx" type= "submit">UPLOAD</a>
             </div>
         </>
     )

@@ -1,0 +1,61 @@
+@use "../../styles/partials/var" as *;
+
+.description{
+    padding: 0 1rem;
+
+    &__title{
+        padding: 1rem 0 1rem;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-weight: 600;
+        border-bottom: 1px solid $sc-mercury;
+    }
+
+    &__container{
+        display: flex;
+        flex-direction: row;
+        border-bottom: 1px solid $sc-mercury;
+        padding: 1rem 0 0;
+    }
+
+    &__stats1{
+        display: flex;
+        flex-grow: 1;
+        flex-direction: column;
+    }
+    &__stats2{
+        display: flex;
+        flex-grow: 2;
+        flex-direction: column;
+    }
+
+    &__author{
+        padding-bottom: 1rem;
+        font-size: 0.82rem;
+        font-weight: 700;
+        line-height: 1.125rem;
+    }
+
+    &__date{
+        padding-bottom: 1rem;
+
+    }
+
+    &__views{
+        padding-bottom: 1rem;
+
+    }
+
+    &__likes{
+        padding-bottom: 1rem;
+    }
+
+    &__synopsis{
+        padding-top: 1rem;
+        font-size: 0.82rem;
+        font-weight: 500;
+        line-height: 1.125rem;
+
+    }
+
+}
