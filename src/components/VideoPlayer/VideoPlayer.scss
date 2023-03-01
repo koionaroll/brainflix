@@ -1,0 +1,6 @@
+@use "../../styles/partials/var" as *;
+
+.video-player{
+    background-color: $pc-silver;
+    aspect-ratio: 16/9;
+}
