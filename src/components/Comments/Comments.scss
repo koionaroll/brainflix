@@ -1,0 +1,127 @@
+@use "../../styles/partials/var" as *;
+
+.comments{
+    padding: 0 1rem;
+
+    &-counter{
+        padding: 1rem 0;
+        font-size: 0.82rem;
+        font-weight: 700;
+        line-height: 1.125rem;
+    }
+
+    &-submit{
+        display: flex;
+        flex-direction: row;
+        border-bottom: 1px solid $sc-mercury;
+
+        &__profile{
+            margin: 1.5rem 1rem 0 0 ;
+            border-radius: 50%;
+            height: 2.25rem;
+            width: 2.25rem;
+            object-fit: cover;
+        }
+
+        &__wrapper{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        &__label{
+            color: $pc-silver;
+            font-size: 0.81rem;
+            line-height: 1.5rem;
+            font-weight: 600;
+        }
+
+        &__textarea{
+            border: 1px solid $sc-mercury;
+            resize: none;
+            overflow: auto;
+            background-color: $sc-alabaster;
+            padding: 0.5rem;
+            border-radius: 0.25rem;
+            height: 5.7rem;
+        }
+
+        textarea:focus, input:focus{
+            outline-color: $pc-brainflix-blue;
+        }
+
+        &__btn{ 
+            border: none;
+            color: $pc-white;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            margin: 1rem 0;
+            height: 2.5rem;
+            border-radius: 0.25rem;
+            background: url("../../assets/icons/add_comment.svg") no-repeat $pc-brainflix-blue 0.4rem 50%;
+            font-size: 0.75rem;
+            animation-timing-function: ease-out;
+            transition-duration: 200ms;
+            animation-delay: 100ms;
+        }
+
+        &__btn:hover{
+            background-color: $sc-brainflix-darkblue;
+            transition-duration: 200ms;
+            animation-timing-function: ease-out;
+            animation-delay: 100ms;
+        }
+    }
+
+    &-list{
+        display: flex;
+        flex-direction: row;
+        padding: 1rem 0 0.5rem;
+        border-bottom: 1px solid $sc-mercury;
+        margin-bottom: 4rem;
+        
+        &__profile{
+            border-radius: 50%;
+            height: 2.25rem;
+            min-width: 2.25rem;
+            background-color: $sc-mercury;
+            margin-right: 1rem;
+        }
+
+        &--column{
+            display: flex;
+            flex-direction: column;
+        }
+
+        &--row{
+            display: flex;
+            flex-direction: row;
+        }
+
+        &__name{
+            font-size: 0.82rem;
+            font-weight: 700;
+            line-height: 1.125rem;
+        }
+
+        &__date{
+            margin-left: auto;
+            color: $pc-silver;
+            font-size: 0.81rem;
+            line-height: 1.125rem;
+        }
+
+        &__content{
+            padding-top: 0.5rem;
+            font-size: 0.82rem;
+            font-weight: 500;
+            line-height: 1.125rem;
+        }
+
+    }
+
+}
+

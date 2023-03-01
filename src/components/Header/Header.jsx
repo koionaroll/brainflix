@@ -9,10 +9,10 @@ function Header() {
             <div className="header">
                 <img className="header__logo" src={logo} alt="logo" />
                 <div className="header__container">
-                    <textarea className="header__search" placeholder="Search"></textarea>
-                    <img className="header__profile" src={profile} alt="profile" />
+                    <textarea className="header__container__search" placeholder="Search"></textarea>
+                    <img className="header__container__profile" src={profile} alt="profile" />
+                    <a className="header__container__upload" href="../../App.jsx" type= "submit">UPLOAD</a>
                 </div>
-                <a className="header__upload" href="../../App.jsx" type= "submit">UPLOAD</a>
             </div>
         </>
     )
