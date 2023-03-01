@@ -1,8 +1,13 @@
 @use "./styles/partials/font" as *;
-
+@use "./styles/partials/var" as *;
+ 
 *{
     font-family: "AvenirNext LT Pro";
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    a, a:active, a:visited{
+        text-decoration: none; 
+        color: $pc-white;
+    }
 }
