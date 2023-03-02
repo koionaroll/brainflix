@@ -1,6 +1,10 @@
-@use "../../styles/partials/var" as *;
+@use "../../styles/partials/var";
+@use "../../styles/partials/mixins" as *;
 
 .video-player{
     background-color: $pc-silver;
     aspect-ratio: 16/9;
+    @include tablet {
+        margin: 0 2rem;
+    }
 }

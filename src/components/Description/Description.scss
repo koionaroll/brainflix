@@ -1,7 +1,11 @@
-@use "../../styles/partials/var" as *;
+@use "../../styles/partials/var";
+@use "../../styles/partials/mixins" as *;
 
 .description{
     padding: 0 1rem;
+    @include tablet{
+        padding: 0 2rem;
+    }
 
     &__title{
         padding: 1rem 0;
@@ -9,6 +13,14 @@
         line-height: 2rem;
         font-weight: 600;
         border-bottom: 1px solid $sc-mercury;
+        color: $pc-brainflix-black;
+        @include tablet{
+            padding: 1.5rem 0 0.5rem;
+            font-size: 2.1rem;
+            line-height: 2.75rem;
+            font-weight: 700;
+            border-bottom: none
+        }
     }
 
     &__container{
@@ -16,31 +28,50 @@
         flex-direction: row;
         border-bottom: 1px solid $sc-mercury;
         padding: 1rem 0 0;
+        @include tablet{
+            padding: 0;
+        }
     }
 
     &__stats1{
         display: flex;
         flex-grow: 1;
         flex-direction: column;
+        @include tablet{
+            flex-grow: 0;
+            flex-direction: row;
+            margin-left: auto;
+        }
     }
     &__stats2{
         display: flex;
         flex-grow: 2;
         flex-direction: column;
+        @include tablet{
+            flex-direction: row;
+            justify-content: flex-end;
+        }
     }
 
     &__author{
+        color: $pc-brainflix-black;
         padding-bottom: 0.75rem;
         font-size: 0.82rem;
         font-weight: 700;
         line-height: 1.125rem;
+        @include tablet{
+            padding-bottom: .5rem;
+        }
     }
 
     &__date{
-        padding-bottom: 0.75rem;
+        padding: 0 0 0.75rem 0;
         color: $pc-silver;
         font-size: 0.81rem;
         line-height: 1.125rem;
+        @include tablet {
+            padding: 0 0 .5rem 2.5rem;
+        }
     }
 
     &__views{
@@ -50,6 +81,9 @@
         font-size: 0.81rem;
         line-height: 1.125rem;
         background: url("../../assets/icons/views.svg") no-repeat;
+        @include tablet {
+            padding-bottom: .5rem;
+        }
     }
 
     &__likes{
@@ -59,6 +93,10 @@
         font-size: 0.81rem;
         line-height: 1.125rem;
         background: url("../../assets/icons/likes.svg") no-repeat;
+        @include tablet {
+            margin-left: 2rem;
+            padding-bottom: .5rem;
+        }
     }
 
 
@@ -67,7 +105,10 @@
         font-size: 0.82rem;
         font-weight: 500;
         line-height: 1.125rem;
-
+        @include tablet {
+            font-size: 0.9rem;
+            line-height: 1.375rem;
+            padding: 1.5rem 0 1rem;
+        }
     }
-
 }

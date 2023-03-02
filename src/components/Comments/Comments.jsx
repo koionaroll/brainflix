@@ -4,10 +4,11 @@ import profile from "../../assets/images/Mohan-muruge.jpg"
 
 const Comments = () => {
     let numOfComments = 3
-    let commentContent = ""
-    let commentName = ""
-    let commentDate = ""
-    let commentProfile = ""
+    // let commentContent = ""
+    // let commentName = ""
+    // let commentDate = ""
+    // let commentProfile = ""
+    // let newComment = ""
 
     
   return (
