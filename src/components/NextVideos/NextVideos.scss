@@ -1,0 +1,46 @@
+@use "../../styles/partials/var" as *;
+
+.next-videos{
+    padding: 0 1rem;
+
+    &__header{
+        padding: 0.75rem 0;
+        color: $pc-silver;
+        font-size: 0.81rem;
+        line-height: 1.5rem;
+        font-weight: 600;
+    }
+
+    &__wrapper{
+        display: flex;
+        flex-direction: row;
+
+        &--column{
+            display: flex;
+            flex-direction: column;
+
+        }
+    }
+
+    &__thumbnail{
+        background-color: $sc-mercury;
+        border-radius: 0.2rem;
+        height: 3.5rem;   
+        min-width: 6rem;
+        margin-right: 1rem;
+    }
+
+    &__title{
+        font-size: 0.82rem;
+        font-weight: 700;
+        line-height: 1.125rem;
+        padding-bottom: 0.4rem;
+    }
+
+    &__author{
+        font-size: 0.82rem;
+        font-weight: 500;
+        line-height: 1.125rem;
+        padding-bottom: 0.75rem;
+    }
+}
