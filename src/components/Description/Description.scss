@@ -2,10 +2,6 @@
 @use "../../styles/partials/mixins" as *;
 
 .description{
-    padding: 0 1rem;
-    @include tablet{
-        padding: 0 2rem;
-    }
 
     &__title{
         padding: 1rem 0;
@@ -20,6 +16,10 @@
             line-height: 2.75rem;
             font-weight: 700;
             border-bottom: none
+        }
+
+        @include desktop{
+            padding: 2rem 0 0.5rem;
         }
     }
 
@@ -50,6 +50,9 @@
         @include tablet{
             flex-direction: row;
             justify-content: flex-end;
+        }
+        @include desktop{
+            padding-right: 1.5rem;
         }
     }
 
@@ -109,6 +112,10 @@
             font-size: 0.9rem;
             line-height: 1.375rem;
             padding: 1.5rem 0 1rem;
+        }
+        @include desktop{
+            padding-right: 1.5rem;
+            padding-bottom: 2rem;
         }
     }
 }

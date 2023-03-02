@@ -2,10 +2,6 @@
 @use "../../styles/partials/mixins" as *;
 
 .comments{
-    padding: 0 1rem;
-    @include tablet{
-        padding: 0 2rem;
-    }
 
     &-counter{
         padding: 1rem 0;
@@ -29,6 +25,9 @@
                 height: 2.5rem;
                 width: 2.5rem;
             }
+            @include desktop{
+                margin-right: 2.5rem;
+            }
         }
 
         &__wrapper{
@@ -49,6 +48,7 @@
             line-height: 1.5rem;
             font-weight: 600;
             @include tablet {
+                font-size: 0.73rem;
                 width: 100%;
             } 
         }
@@ -58,7 +58,7 @@
             resize: none;
             overflow: auto;
             background-color: $sc-alabaster;
-            padding: 0.5rem;
+            padding: 0.65rem 0 0 1rem;
             border-radius: 0.25rem;
             height: 5.7rem;
             @include tablet {
@@ -71,6 +71,9 @@
 
         textarea:focus, input:focus{
             outline-color: $pc-brainflix-blue;
+        }
+        textarea::placeholder{
+          color: $pc-brainflix-black;
         }
 
         &__btn{ 
@@ -93,6 +96,10 @@
                 max-width: 9.375rem;
                 margin: 0 0 0 1.5rem;
             }
+
+            @include desktop{
+                margin-right: 1.5rem;
+            }
         }
 
         &__btn:hover{
@@ -111,6 +118,10 @@
         @include tablet {
             padding: 1.4rem 0;
         }
+
+        @include desktop{
+            padding-right: 1.5rem;
+        }
         
         &__profile{
             border-radius: 50%;
@@ -121,6 +132,9 @@
             @include tablet {
                 height: 2.5rem;
                 min-width: 2.5rem;
+            }
+            @include desktop{
+                margin-right: 2.5rem;
             }
         }
 
@@ -164,10 +178,8 @@
                 font-size: 0.9rem;
                 line-height: 1.375rem;
                 padding-top: 0.3rem;
-            }
+            }    
         }
-
     }
-
 }
 

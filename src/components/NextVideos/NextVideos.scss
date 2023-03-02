@@ -2,9 +2,10 @@
 @use "../../styles/partials/mixins" as *;
 
 .next-videos{
-    padding: 0 1rem;
-    @include tablet {
-        padding: 0 2rem;
+
+    @include desktop{
+        border-left: 1px solid $sc-mercury;
+        min-width: 33%
     }
 
     &__header{
@@ -14,7 +15,12 @@
         line-height: 1.5rem;
         font-weight: 600;
         @include tablet {
-            padding: 1.4rem 0;
+            padding: 1.4rem 0 1rem;
+        }
+
+        @include desktop{
+            padding-left: 1.5rem;
+            padding-top: 2rem;
         }
     }
 
@@ -23,7 +29,11 @@
         flex-direction: row;
         @include tablet {
             margin-bottom: 1.4rem;
-            max-width: 18rem;
+            max-width: 20rem;
+        }
+
+        @include desktop{
+           max-width: 20rem;
         }
 
         &--column{
@@ -42,8 +52,12 @@
         min-width: 6rem;
         margin-right: 1rem;
         @include tablet {
-            height: 4.2rem;   
+            height: 4.1rem;   
             min-width: 7rem;
+        }
+
+        @include desktop{
+            margin-left: 1.5rem;
         }
     }
 

@@ -7,13 +7,17 @@ import NextVideos from "./components/NextVideos/NextVideos"
 
 function App() {
   return (
-    <>
-    <Header />
-    <VideoPlayer/>
-    <Description/>
-    <Comments />
-    <NextVideos />
-    </>
+    <div className="app__margin">
+      <Header />
+      <VideoPlayer/>
+      <div className='app__desktop-layout'>
+        <div className='app__desktop-layout--column'>
+          <Description/>
+          <Comments />
+        </div>
+        <NextVideos />
+      </div>
+    </div>
   )
 }
 

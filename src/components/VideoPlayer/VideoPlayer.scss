@@ -4,7 +4,5 @@
 .video-player{
     background-color: $pc-silver;
     aspect-ratio: 16/9;
-    @include tablet {
-        margin: 0 2rem;
-    }
+    max-height: 35rem;
 }

@@ -1,5 +1,6 @@
 @use "./styles/partials/font" as *;
-@use "./styles/partials/var" as *;
+@use "./styles/partials/mixins" as *;
+@use "./styles/partials/var";
  
 *{
     font-family: "AvenirNext LT Pro";
@@ -11,3 +12,30 @@
         color: $pc-white;
     }
 }
+
+.app{
+    &__margin{
+        padding: 0 1rem;
+        
+        @include tablet {
+            padding: 0 2.25rem;
+        }
+        
+        @include desktop {
+            padding: 0 10vw;    
+        }
+    }
+
+    @include desktop{
+        &__desktop-layout{
+            display: flex;
+            flex-direction: row;
+        
+            &--column{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+}
+
