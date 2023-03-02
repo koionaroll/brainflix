@@ -1,7 +1,11 @@
-@use "../../styles/partials/var" as *;
+@use "../../styles/partials/var" ;
+@use "../../styles/partials/mixins" as *;
 
 .next-videos{
     padding: 0 1rem;
+    @include tablet {
+        padding: 0 2rem;
+    }
 
     &__header{
         padding: 0.75rem 0;
@@ -9,16 +13,25 @@
         font-size: 0.81rem;
         line-height: 1.5rem;
         font-weight: 600;
+        @include tablet {
+            padding: 1.4rem 0;
+        }
     }
 
     &__wrapper{
         display: flex;
         flex-direction: row;
+        @include tablet {
+            margin-bottom: 1.4rem;
+            max-width: 18rem;
+        }
 
         &--column{
             display: flex;
             flex-direction: column;
-
+            @include tablet {
+                justify-content: space-between;
+            }
         }
     }
 
@@ -28,13 +41,22 @@
         height: 3.5rem;   
         min-width: 6rem;
         margin-right: 1rem;
+        @include tablet {
+            height: 4.2rem;   
+            min-width: 7rem;
+        }
     }
 
     &__title{
         font-size: 0.82rem;
-        font-weight: 700;
+        font-weight: 600;
         line-height: 1.125rem;
         padding-bottom: 0.4rem;
+        @include tablet {
+            font-size: 0.9rem;
+            line-height: 1.2rem;
+            padding: 0;
+        }
     }
 
     &__author{
@@ -42,5 +64,10 @@
         font-weight: 500;
         line-height: 1.125rem;
         padding-bottom: 0.75rem;
+        @include tablet {
+            font-size: 0.9rem;
+            line-height: 1.2rem;
+            padding: 0;
+        }
     }
 }

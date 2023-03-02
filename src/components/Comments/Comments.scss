@@ -1,7 +1,11 @@
-@use "../../styles/partials/var" as *;
+@use "../../styles/partials/var" ;
+@use "../../styles/partials/mixins" as *;
 
 .comments{
     padding: 0 1rem;
+    @include tablet{
+        padding: 0 2rem;
+    }
 
     &-counter{
         padding: 1rem 0;
@@ -21,12 +25,22 @@
             height: 2.25rem;
             width: 2.25rem;
             object-fit: cover;
+            @include tablet {
+                height: 2.5rem;
+                width: 2.5rem;
+            }
         }
 
         &__wrapper{
             display: flex;
             flex-direction: column;
             width: 100%;
+            @include tablet {
+                flex-direction: row;
+                align-items: center;
+                flex-wrap: wrap;
+                padding-bottom: 1.8rem;
+            } 
         }
 
         &__label{
@@ -34,6 +48,9 @@
             font-size: 0.81rem;
             line-height: 1.5rem;
             font-weight: 600;
+            @include tablet {
+                width: 100%;
+            } 
         }
 
         &__textarea{
@@ -44,6 +61,12 @@
             padding: 0.5rem;
             border-radius: 0.25rem;
             height: 5.7rem;
+            @include tablet {
+                display: flex;
+                height: 2.5rem;
+                flex-grow:1;
+                margin-top: 0;
+            } 
         }
 
         textarea:focus, input:focus{
@@ -66,6 +89,10 @@
             animation-timing-function: ease-out;
             transition-duration: 200ms;
             animation-delay: 100ms;
+            @include tablet {
+                max-width: 9.375rem;
+                margin: 0 0 0 1.5rem;
+            }
         }
 
         &__btn:hover{
@@ -81,6 +108,9 @@
         flex-direction: row;
         padding: 1rem 0 0.5rem;
         border-bottom: 1px solid $sc-mercury;
+        @include tablet {
+            padding: 1.4rem 0;
+        }
         
         &__profile{
             border-radius: 50%;
@@ -88,6 +118,10 @@
             min-width: 2.25rem;
             background-color: $sc-mercury;
             margin-right: 1rem;
+            @include tablet {
+                height: 2.5rem;
+                min-width: 2.5rem;
+            }
         }
 
         &--column{
@@ -102,8 +136,12 @@
 
         &__name{
             font-size: 0.82rem;
-            font-weight: 700;
+            font-weight: 600;
             line-height: 1.125rem;
+            @include tablet {
+                font-size: 0.9rem;
+                line-height: 1.375rem;
+            }
         }
 
         &__date{
@@ -111,6 +149,10 @@
             color: $pc-silver;
             font-size: 0.81rem;
             line-height: 1.125rem;
+            @include tablet {
+                font-size: 0.9rem;
+                line-height: 1.375rem;
+            }
         }
 
         &__content{
@@ -118,6 +160,11 @@
             font-size: 0.82rem;
             font-weight: 500;
             line-height: 1.125rem;
+            @include tablet {
+                font-size: 0.9rem;
+                line-height: 1.375rem;
+                padding-top: 0.3rem;
+            }
         }
 
     }
