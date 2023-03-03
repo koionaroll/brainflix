@@ -3,7 +3,16 @@
 
 .video-player{
     display: flex;
-    background-color: $pc-silver;
+    flex-grow: 1;
     aspect-ratio: 16/9;
-    justify-content: center;
+    max-height: 40rem;
+
+    &__container{
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        background-color: black;
+    }
 }
+ 

@@ -2,15 +2,11 @@ import "./Comments.scss"
 import profile from "../../assets/images/Mohan-muruge.jpg"
 
 
-const Comments = () => {
+function Comments ({selectedVid}){
     let numOfComments = 3
-    // let commentContent = ""
-    // let commentName = ""
-    // let commentDate = ""
-    // let commentProfile = ""
-    // let newComment = ""
+    const commentsInfo = selectedVid
+    console.log(commentsInfo)
 
-    
   return (
     <section className="comments">
         <h2 className="comments-counter">{numOfComments} Comments</h2>
@@ -22,20 +18,18 @@ const Comments = () => {
                 <button className="comments-submit__btn">COMMENT</button>
             </div>
         </div>
+        {commentsInfo.forEach(element => {      
         <div className="comments-list">
             <div className="comments-list__profile"></div>
             <div className="comments-list--column">
                 <div className="comments-list--row">
-                    <p className="comments-list__name">Micheal Lyons</p>
-                    <p className="comments-list__date">08/09/2021</p>
+                    <p className="comments-list__name">{element.name}</p>
+                    <p className="comments-list__date">{element.timestamp}</p>
                 </div>
-                <p className="comments-list__content">They BLEW the ROOF off 
-                at their last event, once everyone started figuring out they 
-                were going. This is still simply the greatest opening of an 
-                event I have EVER witnessed.
-                </p>
+                <p className="comments-list__content">{element.comment}</p>
             </div>
         </div>
+        })}
     </section>
   )
 }
