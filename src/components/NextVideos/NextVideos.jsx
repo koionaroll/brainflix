@@ -12,13 +12,6 @@ const NextVideos = () => {
           <div className="next-videos__author">Todd Welch</div>
         </div>
       </div>
-      <div className="next-videos__wrapper">
-        <div className="next-videos__thumbnail"></div>
-        <div className="next-videos__wrapper--column">
-          <div className="next-videos__title">Become A Travel Pro In One Easy Lesson</div>
-          <div className="next-videos__author">Todd Welch</div>
-        </div>
-      </div>
     </section>
   )
 }

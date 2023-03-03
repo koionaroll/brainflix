@@ -14,8 +14,6 @@ function App() {
   const [selectedVid, setSelectedvid] = useState(videoData[0]);
   // const [nextVid, setNextVid] = useState(nextVid)
 
-  console.log(videoData[0])
-
   return (
     <>
       <div className="app--margin">

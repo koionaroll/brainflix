@@ -5,7 +5,6 @@ import profile from "../../assets/images/Mohan-muruge.jpg"
 function Comments ({selectedVid}){
     let numOfComments = 3
     const commentsInfo = selectedVid
-    console.log(commentsInfo)
 
   return (
     <section className="comments">
@@ -18,7 +17,8 @@ function Comments ({selectedVid}){
                 <button className="comments-submit__btn">COMMENT</button>
             </div>
         </div>
-        {commentsInfo.forEach(element => {      
+        {commentsInfo.map((element) => { 
+        return (
         <div className="comments-list">
             <div className="comments-list__profile"></div>
             <div className="comments-list--column">
@@ -29,6 +29,7 @@ function Comments ({selectedVid}){
                 <p className="comments-list__content">{element.comment}</p>
             </div>
         </div>
+            )
         })}
     </section>
   )
