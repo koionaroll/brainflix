@@ -14,15 +14,14 @@ function App() {
   const [nextVid, setNextVid] = useState(vidList)
 
   const handleNextVidClick = (id) => {
-      const foundVid = videoData.filter((vid) => vid.id === id)
-      setSelectedVid(foundVid[0])
-
+      const newSelectedVid = videoData.filter((vid) => vid.id === id)
+      setSelectedVid(newSelectedVid[0])
   }
 
   return (
     <>
       <div className="app--margin">
-        <Header />
+      <Header />
       </div>
       <VideoPlayer selectedVid={selectedVid} />
       <div className="app--margin">

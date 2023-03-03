@@ -3,7 +3,6 @@ import logo from "../../assets/logo/BrainFlix-logo.svg"
 import profile from "../../assets/images/Mohan-muruge.jpg"
 
 function Header() {
-
     return (
         <div className="header">
             <img className="header__logo" src={logo} alt="logo" />

@@ -46,6 +46,10 @@
         }
     }
 
+    &__wrapper:hover{
+        cursor: pointer;
+    }
+
     &__thumbnail{
         background-color: $sc-mercury;
         object-fit:cover;

@@ -1,13 +1,11 @@
 import "./NextVideos.scss"
 
 function NextVideos (
-  // {key},
   {nextVid, 
   handleNextVidClick, 
   selectedVid}
-  ) {
+  ){
 
-  
   return (
     <section className="next-videos">
       <h3 className="next-videos__header">NEXT VIDEOS</h3>

@@ -4,8 +4,8 @@ function VideoPlayer({ selectedVid }) {
   return (
     <>
       <div className="video-player__container">
-        <video controls className="video-player">
-          <source src={selectedVid.id}/>
+        <video className="video-player" poster={selectedVid.image} controls>
+          <source src={selectedVid.video + "?api_key='khoitran'"} type="video/mp4"/>
         </video>
       </div>
     </>
