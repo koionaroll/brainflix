@@ -26,7 +26,8 @@
                 width: 2.5rem;
             }
             @include desktop{
-                margin-right: 2.5rem;
+                margin-right: 2.2rem;
+                margin-left: .5rem;
             }
         }
 
@@ -135,6 +136,7 @@
             }
             @include desktop{
                 margin-right: 2.5rem;
+                margin-left: 1rem;
             }
         }
 

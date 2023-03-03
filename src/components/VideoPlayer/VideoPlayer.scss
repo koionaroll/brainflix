@@ -2,7 +2,8 @@
 @use "../../styles/partials/mixins" as *;
 
 .video-player{
+    display: flex;
     background-color: $pc-silver;
     aspect-ratio: 16/9;
-    max-height: 35rem;
+    justify-content: center;
 }
