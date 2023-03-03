@@ -19,7 +19,7 @@ function Comments ({selectedVid}){
         </div>
         {commentsInfo.map((element) => { 
         return (
-        <div className="comments-list">
+        <div className="comments-list" key={element.id}>
             <div className="comments-list__profile"></div>
             <div className="comments-list--column">
                 <div className="comments-list--row">

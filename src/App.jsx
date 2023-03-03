@@ -10,9 +10,14 @@ import videoData from "./data/video-details.json";
 import vidList from "./data/videos.json";
 
 function App() {
-  const [videoInfo, setVid] = useState(videoData)
-  const [selectedVid, setSelectedvid] = useState(videoData[0]);
+  const [selectedVid, setSelectedVid] = useState(videoData[0]);
   const [nextVid, setNextVid] = useState(vidList)
+
+  const handleNextVidClick = (id) => {
+      const foundVid = videoData.filter((vid) => vid.id === id)
+      setSelectedVid(foundVid[0])
+
+  }
 
   return (
     <>
@@ -26,7 +31,11 @@ function App() {
             <Description selectedVid={selectedVid} />
             <Comments selectedVid={selectedVid.comments}/>
           </div>
-          <NextVideos nextVid = {vidList} />
+          <NextVideos 
+          nextVid={nextVid} 
+          handleNextVidClick = {handleNextVidClick} 
+          selectedVid={selectedVid} 
+          />
         </div>
       </div>
     </>
