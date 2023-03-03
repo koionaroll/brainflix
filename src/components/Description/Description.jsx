@@ -8,7 +8,7 @@ function Description ({selectedVid}){
         <div className="description__container">
             <div className="description__stats1">
                 <p className="description__author">By {selectedVid.channel}</p>
-                <p className="description__date">{selectedVid.timestamp}</p>
+                <p className="description__date">{new Date(selectedVid.timestamp).toLocaleDateString(5)}</p>
             </div>
             <div className="description__stats2">
                 <div className="description__views">{selectedVid.views}</div>

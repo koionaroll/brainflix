@@ -6,6 +6,11 @@ function Comments ({selectedVid}){
     let numOfComments = 3
     const commentsInfo = selectedVid
 
+    function formatDate(date){
+       let newDate =  new Date(date)
+        return newDate.toLocaleDateString()
+    }
+
   return (
     <section className="comments">
         <h2 className="comments-counter">{numOfComments} Comments</h2>
@@ -24,7 +29,7 @@ function Comments ({selectedVid}){
             <div className="comments-list--column">
                 <div className="comments-list--row">
                     <p className="comments-list__name">{element.name}</p>
-                    <p className="comments-list__date">{element.timestamp}</p>
+                    <p className="comments-list__date">{new Date (element.timestamp).toLocaleDateString()}</p>
                 </div>
                 <p className="comments-list__content">{element.comment}</p>
             </div>
