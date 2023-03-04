@@ -2,8 +2,16 @@
 @use "../../styles/partials/mixins" as *;
 
 .video-player{
-   width: 100%;
-   aspect-ratio: 16/9;
+    width: 100%;
+    aspect-ratio: 16/9;
+
+     @include tablet{
+            max-width: 44rem;
+        }
+
+        @include desktop{
+            max-width: 53rem;
+        }
 
     &__container{
         background-color: $sc-brainflix-darkblack;
@@ -12,13 +20,12 @@
         margin: 0;
         padding: 0;
 
-        @include tablet{
-            max-height: 24.7rem;
-        }
+        // @include tablet{
+        //     max-height: 24.7rem;
+        // }
 
-        @include desktop{
-            max-height: 30rem;
-        }
+        // @include desktop{
+        //     max-height: 30rem;
+        // }
     }
 }
- 
