@@ -29,7 +29,7 @@ function App() {
       </div>
       <VideoPlayer selectedVid={selectedVid} />
       <div className="app--margin">
-        {/*  */}
+        {/*added responsive class layout for desktop mode */}
         <div className="app__desktop-layout">
           <div className="app__desktop-layout--column">
             <Description selectedVid={selectedVid} />
