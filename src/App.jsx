@@ -28,7 +28,7 @@ function App() {
         <div className="app__desktop-layout">
           <div className="app__desktop-layout--column">
             <Description selectedVid={selectedVid} />
-            <Comments selectedVid={selectedVid.comments}/>
+            <Comments commentsInfo={selectedVid.comments}/>
           </div>
           <NextVideos 
           nextVid={nextVid} 

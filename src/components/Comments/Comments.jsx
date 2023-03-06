@@ -1,9 +1,8 @@
 import "./Comments.scss";
 import profile from "../../assets/images/Mohan-muruge.jpg";
+import CommentsList from "../CommentsList/CommentsList";
 
-function Comments({ selectedVid }) {
-    const commentsInfo = selectedVid;
-
+function Comments({commentsInfo}) {
   return (
     <section className="comments">
       <h2 className="comments-counter">{commentsInfo.length} Comments</h2>
@@ -18,22 +17,7 @@ function Comments({ selectedVid }) {
           <button className="comments-submit__btn">COMMENT</button>
         </div>
       </div>
-      {commentsInfo.map((element) => {
-        return (
-          <div className="comments-list" key={element.id}>
-            <div className="comments-list__profile"></div>
-            <div className="comments-list--column">
-              <div className="comments-list--row">
-                <p className="comments-list__name">{element.name}</p>
-                <p className="comments-list__date">
-                  {new Date(element.timestamp).toLocaleDateString()}
-                </p>
-              </div>
-              <p className="comments-list__content">{element.comment}</p>
-            </div>
-          </div>
-        );
-      })}
+      <CommentsList commentsInfo={commentsInfo}  key={commentsInfo.id}/>
     </section>
   );
 }
