@@ -13,6 +13,7 @@ function App() {
   const [selectedVid, setSelectedVid] = useState(videoData[0]);
   const [nextVid, setNextVid] = useState(vidList)
 
+  //filters (does not permanently remove) the selected video from the data on click
   const handleNextVidClick = (id) => {
       const newSelectedVid = videoData.filter((vid) => vid.id === id)
       setSelectedVid(newSelectedVid[0])
@@ -28,6 +29,7 @@ function App() {
         <div className="app__desktop-layout">
           <div className="app__desktop-layout--column">
             <Description selectedVid={selectedVid} />
+            {/* changed name of selectedVid.comments to commentsInfo since this is what this is referring to in the dataset */}
             <Comments commentsInfo={selectedVid.comments}/>
           </div>
           <NextVideos 
