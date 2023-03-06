@@ -17,6 +17,7 @@ function Comments({commentsInfo}) {
           <button className="comments-submit__btn">COMMENT</button>
         </div>
       </div>
+      {/* render comment list and passing through commentsInfo as prop*/}
       <CommentsList commentsInfo={commentsInfo}  key={commentsInfo.id}/>
     </section>
   );

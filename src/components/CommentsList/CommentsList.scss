@@ -80,8 +80,10 @@
     }
 }
 
-@include desktop {
-    .comments-list:last-child {
+
+//remove bottom border of last comment when in desktop mode
+.comments-list:last-child {
+    @include desktop {
         border-bottom: none;
     }
 }
