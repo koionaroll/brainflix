@@ -6,8 +6,8 @@ import Description from "./components/Description/Description";
 import Comments from "./components/Comments/Comments";
 import NextVideos from "./components/NextVideos/NextVideos";
 
-import videoData from "./data/video-details.json";
 import vidList from "./data/videos.json";
+import videoData from "./data/video-details.json";
 
 function App() {
   //declare selectedVid from detailed video dataset and useState i[0] since we want to start with the first video
