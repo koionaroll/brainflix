@@ -30,8 +30,7 @@
     @include desktop{
         &__desktop-layout{
             display: flex;
-            flex-direction: row;
-        
+            flex-direction: row;        
             &--column{
                 display: flex;
                 flex-direction: column;

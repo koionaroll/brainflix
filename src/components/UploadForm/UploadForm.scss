@@ -137,7 +137,7 @@
             color: $pc-brainflix-blue;
             font-weight: 600;
             margin-top: 1.5rem;
-
+            
             @include tablet {
                 order: 1;
             }
@@ -146,6 +146,9 @@
         &-cancel:hover {
             border: 2px solid $pc-brainflix-blue;
             background: none;
+            transition-duration: 200ms;
+            animation-timing-function: ease-out;
+            animation-delay: 100ms;
             cursor: pointer;
         }
     }

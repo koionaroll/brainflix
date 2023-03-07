@@ -29,8 +29,8 @@ function VideoPage() {
       <VideoPlayer selectedVid={selectedVid} />
       <div className="video-page--margin">
         {/*added responsive class layout for desktop mode */}
-        <div className="video-page-layout">
-          <div className="video-page-layout--column">
+        <div className="video-page__desktop-layout">
+          <div className="video-page__desktop-layout--column">
             <Description selectedVid={selectedVid} />
             {/* changed name of selectedVid.comments to commentsInfo since this is what this is referring to in the dataset */}
             <Comments commentsInfo={selectedVid.comments} />
