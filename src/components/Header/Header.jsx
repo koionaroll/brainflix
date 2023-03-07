@@ -6,9 +6,7 @@ import profile from "../../assets/images/Mohan-muruge.jpg"
 function Header() {
     return (
         <div className="header">
-            <NavLink to="/">
-            <img className="header__logo" src={logo} alt="logo"/>
-            </NavLink>
+            <NavLink to="/"><img className="header__logo" src={logo} alt="logo"/></NavLink>
             <div className="header__container">
                 <textarea className="header__container__search" placeholder="Search"></textarea>
                 <img className="header__container__profile" src={profile} alt="profile" />
