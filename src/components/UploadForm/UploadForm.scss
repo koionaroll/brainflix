@@ -146,6 +146,7 @@
         }
 
         &-cancel:hover {
+            color: $pc-brainflix-blue;
             border: 2px solid $pc-brainflix-blue;
             background: none;
             cursor: pointer;
