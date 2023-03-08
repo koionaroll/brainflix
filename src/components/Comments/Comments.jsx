@@ -5,7 +5,7 @@ import CommentsList from "../CommentsList/CommentsList";
 function Comments({commentsInfo}) {
   return (
     <section className="comments">
-      <h2 className="comments-counter">{commentsInfo.length} Comments</h2>
+      <h2 className="comments-counter">{commentsInfo?.length} Comments</h2>
       <div className="comments-submit">
         <img className="comments-submit__profile" src={profile} alt="pfp" />
         <div className="comments-submit__wrapper">
@@ -18,7 +18,7 @@ function Comments({commentsInfo}) {
         </div>
       </div>
       {/* render comment list and passing through commentsInfo as prop*/}
-      <CommentsList commentsInfo={commentsInfo}  key={commentsInfo.id}/>
+      <CommentsList commentsInfo={commentsInfo}  key={commentsInfo?.id}/>
     </section>
   );
 }
