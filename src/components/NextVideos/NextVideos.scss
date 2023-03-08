@@ -72,6 +72,7 @@
         font-weight: 600;
         line-height: 1.125rem;
         padding-bottom: 0.4rem;
+        color: $sc-brainflix-darkblack;
         @include tablet {
             font-size: 0.9rem;
             line-height: 1.2rem;
@@ -83,6 +84,7 @@
         font-size: 0.82rem;
         font-weight: 500;
         line-height: 1.125rem;
+        color: $sc-brainflix-darkblack;
         @include tablet {
             font-size: 0.9rem;
             line-height: 1.2rem;

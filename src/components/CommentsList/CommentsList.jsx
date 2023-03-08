@@ -4,7 +4,7 @@ function CommentsList({ commentsInfo }) {
   return (
     <>
     {/* maps out each element of the array so that they can be targeted accordingly */}
-      {commentsInfo.map((element) => (
+      {commentsInfo?.map((element) => (
         <div className="comments-list" key={element.id}>
           <div className="comments-list__profile"></div>
           <div className="comments-list--column">

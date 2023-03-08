@@ -44,7 +44,8 @@
                 padding-bottom: 1rem;
                 border-bottom: 1px solid $sc-mercury;
             }
-            @include desktop{
+
+            @include desktop {
                 padding-bottom: 0rem;
                 display: flex;
                 flex-direction: column;
@@ -80,9 +81,9 @@
     textarea::placeholder {
         color: $pc-brainflix-black;
     }
-    
-    &__desktop-layout--row{
-        @include desktop{
+
+    &__desktop-layout--row {
+        @include desktop {
             display: flex;
             gap: 2rem;
             border-bottom: 1px solid $sc-mercury;
@@ -137,7 +138,8 @@
             color: $pc-brainflix-blue;
             font-weight: 600;
             margin-top: 1.5rem;
-            
+            transition-duration: 100ms;
+
             @include tablet {
                 order: 1;
             }
@@ -146,10 +148,8 @@
         &-cancel:hover {
             border: 2px solid $pc-brainflix-blue;
             background: none;
-            transition-duration: 200ms;
-            animation-timing-function: ease-out;
-            animation-delay: 100ms;
             cursor: pointer;
+            transition-duration: 100ms;
         }
     }
 
