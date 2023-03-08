@@ -24,18 +24,17 @@ function VideoPage() {
     if (vidID) {
       getSelectedVids(vidID);
     } else if (nextVid.length) {
-      getSelectedVids("84e96018-4022-434e-80bf-000ce4cd12b8");
+      getSelectedVids(nextVid[0].id);
     }
   }, [vidID, nextVid]);
-
 
   function getNextVids() {
     axios
       .get(`${apiUrl}/videos/?api_key=${apiKey}`)
       .then((response) => {
-        setNextVid(response.data)
+        setNextVid(response.data);
       })
-      .catch((err) => { 
+      .catch((err) => {
         console.log("error: ", err);
       });
   }
@@ -46,7 +45,7 @@ function VideoPage() {
       .then((res) => {
         setSelectedVid(res.data);
       })
-      .catch((err) => { 
+      .catch((err) => {
         console.log("error: ", err);
       });
   }
@@ -62,10 +61,7 @@ function VideoPage() {
             <Description selectedVid={selectedVid} />
             <Comments commentsInfo={selectedVid.comments} />
           </div>
-            <NextVideos
-              nextVid={nextVid}
-              selectedVid={selectedVid}
-            />
+          <NextVideos nextVid={nextVid} selectedVid={selectedVid} />
         </div>
       </div>
     </>
