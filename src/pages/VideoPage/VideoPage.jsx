@@ -14,7 +14,7 @@ export const apiKey = "25bee686-6e20-459e-adb2-ee05dd754350";
 function VideoPage() {
   const [selectedVid, setSelectedVid] = useState({});
   const [nextVid, setNextVid] = useState([]);
-  const {vidID} = useParams();
+  const { vidID } = useParams();
 
   useEffect(() => {
     getNextVids();
@@ -24,7 +24,7 @@ function VideoPage() {
     if (vidID) {
       getSelectedVids(vidID);
     } else if (nextVid.length) {
-      getSelectedVids(selectedVid[0].id);
+      getSelectedVids("84e96018-4022-434e-80bf-000ce4cd12b8");
     }
   }, [vidID, nextVid]);
 
@@ -33,7 +33,7 @@ function VideoPage() {
     axios
       .get(`${apiUrl}/videos/?api_key=${apiKey}`)
       .then((response) => {
-        setNextVid(response.data);
+        setNextVid(response.data)
       })
       .catch((err) => { 
         console.log("error: ", err);
@@ -43,15 +43,13 @@ function VideoPage() {
   function getSelectedVids(id) {
     axios
       .get(`${apiUrl}/videos/${id}/?api_key=${apiKey}`)
-      .then((response) => {
-        setSelectedVid(response.data);
+      .then((res) => {
+        setSelectedVid(res.data);
       })
       .catch((err) => { 
         console.log("error: ", err);
       });
   }
-console.log(selectedVid)
-  
   return (
     <>
       <div className="video-page--margin">
@@ -62,7 +60,7 @@ console.log(selectedVid)
         <div className="video-page__desktop-layout">
           <div className="video-page__desktop layout--column">
             <Description selectedVid={selectedVid} />
-            <Comments commentsInfo={selectedVid} />
+            <Comments commentsInfo={selectedVid.comments} />
           </div>
             <NextVideos
               nextVid={nextVid}
