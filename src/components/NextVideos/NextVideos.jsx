@@ -11,10 +11,11 @@ function NextVideos({ nextVid, selectedVid }){
         .filter((element) => element.id !== selectedVid.id)
         .map((element) => {
           return (
-            <Link to={`/${element.id}`}
+            <Link to={`/${element.id}`} 
               className="next-videos__wrapper"
               key={element.id}
             >
+              {window.scrollTo(0, 0)}
               <img className="next-videos__thumbnail" src={element.image} />
               <div className="next-videos__wrapper--column">
                 <div className="next-videos__title">{element.title}</div>

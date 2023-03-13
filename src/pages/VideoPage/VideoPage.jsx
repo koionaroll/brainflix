@@ -18,6 +18,7 @@ function VideoPage() {
 
   useEffect(() => {
     getNextVids();
+    window.scrollTo(0, 0)
   }, []);
 
   useEffect(() => {
