@@ -18,7 +18,6 @@ function VideoPage() {
 
   useEffect(() => {
     getNextVids();
-    window.scrollTo(0, 0)
   }, []);
 
   useEffect(() => {
@@ -62,7 +61,7 @@ function VideoPage() {
             <Description selectedVid={selectedVid} />
             <Comments commentsInfo={selectedVid.comments} />
           </div>
-          <NextVideos nextVid={nextVid} selectedVid={selectedVid} />
+          <NextVideos selectedVid={selectedVid} nextVid={nextVid}/>
         </div>
       </div>
     </>
