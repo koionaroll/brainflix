@@ -1,78 +1,83 @@
-@use "../../styles/partials/var" ;
+@use "../../styles/partials/var";
 @use "../../styles/partials/mixins" as *;
 
-.next-videos{
+.next-videos {
 
-    @include desktop{
+    @include desktop {
         border-left: 1px solid $sc-mercury;
         min-width: 33%
     }
 
-    &__header{
+    &__header {
         padding: 0.75rem 0;
         color: $pc-silver;
         font-size: 0.81rem;
         line-height: 1.5rem;
         font-weight: 600;
+
         @include tablet {
             padding: 1.4rem 0 1rem;
         }
 
-        @include desktop{
+        @include desktop {
             padding-left: 1.5rem;
             padding-top: 2rem;
         }
     }
 
-    &__wrapper{
+    &__wrapper {
         display: flex;
         flex-direction: row;
         padding-bottom: 0.75rem;
+
         @include tablet {
             margin-bottom: 1.4rem;
             max-width: 20rem;
         }
 
-        @include desktop{
-           max-width: 20rem;
+        @include desktop {
+            max-width: 20rem;
         }
 
-        &--column{
+        &--column {
             display: flex;
             flex-direction: column;
+
             @include tablet {
                 justify-content: space-between;
             }
         }
     }
 
-    &__wrapper:hover{
+    &__wrapper:hover {
         cursor: pointer;
     }
 
-    &__thumbnail{
+    &__thumbnail {
         background-color: $sc-mercury;
-        object-fit:cover;
+        object-fit: cover;
         border-radius: 0.2rem;
-        height: 3.5rem;   
+        height: 3.5rem;
         min-width: 6rem;
         margin-right: 1rem;
+
         @include tablet {
-            height: 4.1rem;   
+            height: 4.1rem;
             min-width: 7rem;
         }
 
-        @include desktop{
+        @include desktop {
             margin-left: 1.5rem;
         }
     }
 
-    &__title{
+    &__title {
         font-size: 0.82rem;
         font-weight: 600;
         line-height: 1.125rem;
         padding-bottom: 0.4rem;
         color: $sc-brainflix-darkblack;
+
         @include tablet {
             font-size: 0.9rem;
             line-height: 1.2rem;
@@ -80,11 +85,12 @@
         }
     }
 
-    &__author{
+    &__author {
         font-size: 0.82rem;
         font-weight: 500;
         line-height: 1.125rem;
         color: $sc-brainflix-darkblack;
+
         @include tablet {
             font-size: 0.9rem;
             line-height: 1.2rem;

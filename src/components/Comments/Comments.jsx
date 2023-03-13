@@ -2,7 +2,7 @@ import "./Comments.scss";
 import profile from "../../assets/images/Mohan-muruge.jpg";
 import CommentsList from "../CommentsList/CommentsList";
 
-function Comments({commentsInfo}) {
+function Comments({ commentsInfo }) {
   return (
     <section className="comments">
       <h2 className="comments-counter">{commentsInfo?.length} Comments</h2>
@@ -17,8 +17,7 @@ function Comments({commentsInfo}) {
           <button className="comments-submit__btn">COMMENT</button>
         </div>
       </div>
-      {/* render comment list and passing through commentsInfo as prop*/}
-      <CommentsList commentsInfo={commentsInfo}  key={commentsInfo?.id}/>
+      <CommentsList commentsInfo={commentsInfo} key={commentsInfo?.id} />
     </section>
   );
 }

@@ -1,4 +1,4 @@
-import Header from "../../components/Header/Header";
+import PageHeader from "../../components/PageHeader/PageHeader";
 import UploadForm from "../../components/UploadForm/UploadForm";
 import "./UploadPage.scss";
 
@@ -7,7 +7,7 @@ function UploadPage() {
     <>
       <div className="header-spacer">
         <div className="upload-page--margin">
-          <Header />
+          <PageHeader />
         </div>
       </div>
       <div className="upload-page--margin">

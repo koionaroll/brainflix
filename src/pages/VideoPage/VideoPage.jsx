@@ -2,7 +2,7 @@ import "./VideoPage.scss";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import Header from "../../components/Header/Header";
+import PageHeader from "../../components/PageHeader/PageHeader";
 import VideoPlayer from "../../components/VideoPlayer/VideoPlayer";
 import Description from "../../components/Description/Description";
 import Comments from "../../components/Comments/Comments";
@@ -23,7 +23,7 @@ function VideoPage() {
   useEffect(() => {
     if (vidID) {
       getSelectedVids(vidID);
-    } else if (nextVid.length) {
+    } else if (nextVid.length) { 
       getSelectedVids(nextVid[0].id);
     }
   }, [vidID, nextVid]);
@@ -52,7 +52,7 @@ function VideoPage() {
   return (
     <>
       <div className="video-page--margin">
-        <Header />
+        <PageHeader />
       </div>
       <VideoPlayer selectedVid={selectedVid} />
       <div className="video-page--margin">
