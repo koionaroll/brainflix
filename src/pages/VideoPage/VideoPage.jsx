@@ -8,8 +8,8 @@ import Description from "../../components/Description/Description";
 import Comments from "../../components/Comments/Comments";
 import NextVideos from "../../components/NextVideos/NextVideos";
 
-export const apiUrl = "https://project-2-api.herokuapp.com";
-export const apiKey = "25bee686-6e20-459e-adb2-ee05dd754350";
+export const apiUrl = "http://localhost:8080";
+// export const apiKey = "25bee686-6e20-459e-adb2-ee05dd754350";
 
 function VideoPage() {
   const [selectedVid, setSelectedVid] = useState({});
@@ -30,7 +30,7 @@ function VideoPage() {
 
   function getNextVids() {
     axios
-      .get(`${apiUrl}/videos/?api_key=${apiKey}`)
+      .get(`${apiUrl}`)
       .then((response) => {
         setNextVid(response.data);
       })
@@ -41,7 +41,7 @@ function VideoPage() {
 
   function getSelectedVids(id) {
     axios
-      .get(`${apiUrl}/videos/${id}/?api_key=${apiKey}`)
+      .get(`${apiUrl}/${id}`)
       .then((res) => {
         setSelectedVid(res.data);
       })
