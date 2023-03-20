@@ -31,9 +31,8 @@ function UploadForm() {
         description: description.value,
       })
       .then(()=>{
-       setTimeout(() => {
-        navigate("/")
-       }, 250);
+      alert("Video Uploaded")
+      navigate("/")
       })
       .catch((err) => {
         console.log(err);

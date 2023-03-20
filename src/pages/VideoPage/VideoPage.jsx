@@ -9,7 +9,6 @@ import Comments from "../../components/Comments/Comments";
 import NextVideos from "../../components/NextVideos/NextVideos";
 
 export const apiUrl = "http://localhost:8080";
-// export const apiKey = "25bee686-6e20-459e-adb2-ee05dd754350";
 
 function VideoPage() {
   const [selectedVid, setSelectedVid] = useState({});
